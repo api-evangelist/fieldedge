@@ -1,0 +1,84 @@
+aid: fieldedge
+name: FieldEdge
+review:
+  question: Does FieldEdge expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. FieldEdge's API is a partner-gated REST
+    surface delivered through an Azure API Management developer portal
+    (docs.api.fieldedge.com). There is no documented server-push transport
+    (WebSocket or SSE) on FieldEdge's own API to model, and the reference itself
+    is behind a partner sign-in, so there is no public streaming surface to
+    describe with AsyncAPI.
+findings:
+  summary: |
+    FieldEdge does not publish a documented public WebSocket API. FieldEdge is
+    field service management (FSM) software for HVAC, plumbing, and electrical
+    contractors, owned by Xplor Technologies ("FieldEdge by Xplor"). It operates
+    a real but partner-gated API through an Azure API Management developer portal
+    at docs.api.fieldedge.com: developers can browse and sign up, but API
+    products and keys are provisioned to approved integration partners rather
+    than being openly self-serve. FieldEdge advertises 40+ integration partners
+    across accounting, marketing, and review management, plus a QuickBooks sync.
+    The public integration surface is request/response REST over HTTPS; no
+    realtime, bidirectional, or streaming WebSocket (ws:// or wss://) endpoint is
+    documented anywhere in FieldEdge's public materials as of the review date.
+  accessModel: |
+    Partner-gated. The developer portal (docs.api.fieldedge.com, "Providing API
+    access to our integrated partners") is public to browse and offers sign-up,
+    but the API products, operations, keys, and any OpenAPI definition sit behind
+    the portal sign-in and partner approval. FieldEdge's own marketing describes
+    a partner-based integration model, directing prospective integrators to
+    sales/partners rather than a self-serve developer key flow. Because of this,
+    the APIs listed in apis.yml are honestly modeled from FieldEdge's documented
+    product modules (Customers & Locations, Work Orders & Mobile,
+    Dispatch/Scheduling, Invoices/Payments, Service Agreements, Pricebook) and
+    are flagged endpointsModeled - no full OpenAPI surface was fabricated.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.fieldedge.com
+      documented: partner-gated
+      note: >-
+        REST API fronted by Azure API Management; reference and keys are behind
+        the partner developer-portal sign-in. Base URL is modeled from the
+        docs.api.fieldedge.com portal host.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented in any public FieldEdge material as of the review date.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The endpoint paths implied by the modeled logical APIs (e.g. /customers,
+    /work-orders, /appointments, /invoices, /service-agreements, /pricebook) are
+    inferred from FieldEdge's documented product modules and third-party
+    descriptions of the integration surface. They were not copied from a
+    published public API reference, which is partner-gated.
+sources:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+    note: Azure API Management developer portal; browse/sign-up public, API products and keys gated to integration partners.
+  - url: https://fieldedge.com/blog/fieldedge-app-integrations/
+    type: Documentation
+    note: Describes FieldEdge's partner-based integration model and 40+ integration partners.
+  - url: https://fieldedge.com/pricing/
+    type: Pricing
+    note: Per-user subscription pricing for the FieldEdge software product.
+  - url: https://fieldedge.com/company/
+    type: Website
+    note: Company background; FieldEdge (formerly dESCO) is owned by Xplor Technologies.
+  - url: https://www.linkedin.com/company/fieldedge
+    type: LinkedIn
+    note: FieldEdge by Xplor company page.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and FieldEdge's own public API is a
+    partner-gated request/response REST surface behind an Azure API Management
+    developer portal. No AsyncAPI document was created because there is no
+    documented server-push transport on FieldEdge's own API to model, and the
+    reference is not publicly accessible.

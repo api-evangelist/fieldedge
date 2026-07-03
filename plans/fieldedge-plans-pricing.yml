@@ -1,0 +1,55 @@
+aid: fieldedge
+name: FieldEdge Plans & Pricing
+description: >-
+  FieldEdge is sold as a per-user monthly subscription for the software product,
+  not as a metered/tiered API plan. API access itself is partner-gated (provided
+  to approved integration partners through the Azure API Management developer
+  portal) and does not carry a separately published, self-serve price. The plan
+  figures below reflect the FieldEdge software subscription as publicly reported,
+  and should be treated as indicative - FieldEdge provides quotes via sales
+  rather than a fully published price list.
+source: https://fieldedge.com/pricing/
+currency: USD
+billing: monthly, month-to-month (no long-term contract)
+pricingModel: per-user subscription
+plans:
+  - name: Office User (Dispatcher / Management)
+    unit: per office user / month
+    price: 100
+    note: >-
+      Back-office seats for dispatchers, CSRs, and management. Indicative
+      publicly reported figure.
+  - name: Technician (Field User)
+    unit: per technician / month
+    price: 125
+    note: >-
+      Field seats using the FieldEdge mobile app. Indicative publicly reported
+      figure.
+typicalStartingCost:
+  amount: 225
+  unit: per month
+  note: Approximate minimum for 1 office user plus 1 technician.
+additionalCosts:
+  - name: Setup / implementation
+    amount: 500-2000
+    note: One-time; higher end includes an implementation/training plan.
+  - name: Implementation period
+    note: Subscription typically begins after an initial ~5-week implementation period.
+  - name: GPS tracking
+    amount: 25
+    unit: per vehicle / month
+    note: Via a separate vendor.
+  - name: Review management
+    amount: 249+
+    unit: per month
+    note: Via Podium (third party).
+apiPricing:
+  published: false
+  note: >-
+    No separately published, self-serve API price. API access is granted to
+    approved integration partners; commercial terms are handled through the
+    FieldEdge partner/sales process.
+disclaimer: >-
+  Pricing is indicative and compiled from publicly reported figures; FieldEdge
+  does not publish a complete fixed price list and quotes are provided by sales.
+  Verify current pricing at https://fieldedge.com/pricing/.

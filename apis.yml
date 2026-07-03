@@ -1,0 +1,152 @@
+aid: fieldedge
+url: https://raw.githubusercontent.com/api-evangelist/fieldedge/refs/heads/main/apis.yml
+name: FieldEdge
+kind: company
+description: FieldEdge is field service management (FSM) software for HVAC, plumbing,
+  electrical, and other home- and commercial-services contractors, owned by Xplor
+  Technologies (branded "FieldEdge by Xplor"). It provides customer management,
+  dispatching and scheduling, work orders, a technician mobile app, flat-rate
+  pricebook, service agreements, invoicing and payments, and QuickBooks accounting
+  sync. FieldEdge operates a partner-gated API delivered through an Azure API
+  Management developer portal (docs.api.fieldedge.com); API products and keys are
+  restricted to approved integration partners rather than being openly
+  self-serve. The logical APIs listed here are honestly modeled from FieldEdge's
+  documented product modules and its partner/integration surface - endpoint paths
+  are modeled, not copied from a published public reference, because the reference
+  and OpenAPI live behind the partner portal sign-in.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Field Service Management
+- FSM
+- HVAC
+- Plumbing
+- Electrical
+- Home Services
+- Dispatch
+- Work Orders
+- Contractors
+- Xplor
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis:
+- aid: fieldedge:fieldedge-customers-api
+  name: FieldEdge Customers API
+  tags:
+  - Customers
+  - Locations
+  - Equipment
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  - url: https://fieldedge.com/blog/fieldedge-app-integrations/
+    type: Documentation
+  description: Manage customers, their service locations, and installed equipment
+    records (make, model, age, and service history). Endpoint paths are modeled
+    from FieldEdge's documented Customers & Locations module; the authoritative
+    reference is partner-gated behind the Azure API Management developer portal.
+- aid: fieldedge:fieldedge-work-orders-api
+  name: FieldEdge Work Orders API
+  tags:
+  - Work Orders
+  - Jobs
+  - Service Calls
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  description: Create and track work orders (service calls / jobs) through their
+    lifecycle, including status transitions, notes, attachments (photos), and
+    technician signatures captured in the mobile app. Endpoint paths are modeled
+    from FieldEdge's documented Work Orders & Mobile module; the authoritative
+    reference is partner-gated.
+- aid: fieldedge:fieldedge-dispatch-api
+  name: FieldEdge Dispatch & Scheduling API
+  tags:
+  - Dispatch
+  - Scheduling
+  - Appointments
+  - Technicians
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  description: Read and manage appointments on the dispatch board - assigning jobs
+    to technicians and viewing scheduled work across technicians and time windows.
+    Endpoint paths are modeled from FieldEdge's documented Dispatch/Scheduling
+    module; the authoritative reference is partner-gated.
+- aid: fieldedge:fieldedge-invoices-api
+  name: FieldEdge Invoices & Payments API
+  tags:
+  - Invoices
+  - Payments
+  - Billing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  description: Generate and retrieve invoices from completed work and record
+    payments, feeding the QuickBooks accounting sync. Endpoint paths are modeled
+    from FieldEdge's documented Invoices/Payments module; the authoritative
+    reference is partner-gated.
+- aid: fieldedge:fieldedge-service-agreements-api
+  name: FieldEdge Service Agreements API
+  tags:
+  - Service Agreements
+  - Maintenance Plans
+  - Recurring
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  description: Manage recurring service agreements (maintenance plans) tied to
+    customers and equipment, including covered visits and renewal tracking.
+    Endpoint paths are modeled from FieldEdge's documented Service Agreements
+    module; the authoritative reference is partner-gated.
+- aid: fieldedge:fieldedge-pricebook-api
+  name: FieldEdge Pricebook API
+  tags:
+  - Pricebook
+  - Flat Rate
+  - Catalog
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.api.fieldedge.com
+  baseURL: https://api.fieldedge.com
+  endpointsModeled: true
+  properties:
+  - url: https://docs.api.fieldedge.com
+    type: Documentation
+  description: Read the flat-rate pricebook of services, parts, and materials used
+    to build quotes and invoices in the field. Endpoint paths are modeled from
+    FieldEdge's documented Pricebook module; the authoritative reference is
+    partner-gated.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/fieldedge
+- type: Website
+  url: https://fieldedge.com
+- type: Documentation
+  url: https://docs.api.fieldedge.com
+- type: Pricing
+  url: https://fieldedge.com/pricing/
+- type: Plans
+  url: plans/fieldedge-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
