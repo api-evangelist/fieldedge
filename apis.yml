@@ -137,6 +137,8 @@ apis:
     FieldEdge's documented Pricebook module; the authoritative reference is
     partner-gated.
 common:
+- type: DomainSecurity
+  url: security/fieldedge-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/fieldedge
 - type: Website
@@ -147,6 +149,8 @@ common:
   url: https://fieldedge.com/pricing/
 - type: Plans
   url: plans/fieldedge-plans-pricing.yml
+- type: Blog
+  url: https://fieldedge.com/blog/feed/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
