@@ -57,6 +57,10 @@ apis:
   name: FieldEdge Customers API
   tags:
   - Customers
+  - Location
+  - Equipment
+  tags_raw:
+  - Customers
   - Locations
   - Equipment
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
