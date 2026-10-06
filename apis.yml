@@ -50,7 +50,7 @@ tags:
 - Contractors
 - Xplor
 created: '2026-07-03'
-modified: '2026-07-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: fieldedge:fieldedge-customers-api
@@ -168,6 +168,8 @@ apis:
     FieldEdge's documented Pricebook module; the authoritative reference is
     partner-gated.
 common:
+- url: https://fieldedge.com/feed/
+  type: BlogRSS
 - type: DomainSecurity
   url: security/fieldedge-domain-security.yml
 - type: LinkedIn
