@@ -57,3 +57,26 @@ disclaimer: >-
   Pricing is indicative and compiled from publicly reported figures; FieldEdge
   does not publish a complete fixed price list and quotes are provided by sales.
   Verify current pricing at https://fieldedge.com/pricing/.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - seat
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: Office User (Dispatcher / Management)
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods: []
+  - name: Technician (Field User)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods: []
