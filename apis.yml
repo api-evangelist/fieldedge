@@ -39,6 +39,16 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fieldedge.png
 tags:
+- Field Service
+- HVAC
+- Plumbing
+- Electrical
+- Home Services
+- Dispatch
+- Work Orders
+- Contractors
+- Xplor
+tags_raw:
 - Field Service Management
 - FSM
 - HVAC
