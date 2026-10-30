@@ -1,4 +1,4 @@
-# FieldEdge (fieldedge)
+# FieldEdge
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,91 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-FieldEdge is field service management (FSM) software for HVAC, plumbing, electrical, and other home- and commercial-services contractors, owned by Xplor Technologies and branded "FieldEdge by Xplor" (formerly dESCO). It provides customer management, dispatching and scheduling, work orders, a technician mobile app, a flat-rate pricebook, service agreements, invoicing and payments, and a QuickBooks accounting sync.
+FieldEdge is field service management (FSM) software for HVAC, plumbing, electrical, and other home- and commercial-services contractors, owned by Xplor Technologies (branded "FieldEdge by Xplor"). It provides customer management, dispatching and scheduling, work orders, a technician mobile app, flat-rate pricebook, service agreements, invoicing and payments, and QuickBooks accounting sync. FieldEdge operates a partner-gated API delivered through an Azure API Management developer portal (docs.api.fieldedge.com); API products and keys are restricted to approved integration partners rather than being openly self-serve. The logical APIs listed here are honestly modeled from FieldEdge's documented product modules and its partner/integration surface - endpoint paths are modeled, not copied from a published public reference, because the reference and OpenAPI live behind the partner portal sign-in.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/fieldedge/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/fieldedge/refs/heads/main/apis.yml)
+**Areas:** Field Service · HVAC · Plumbing · Electrical · Home Services · Dispatch · Work Orders · Contractors · Xplor
 
-## API Access Model — Partner-Gated
+## FieldEdge on APIs.io
 
-FieldEdge operates a **real but partner-gated** API. It is delivered through an Azure API Management developer portal at [docs.api.fieldedge.com](https://docs.api.fieldedge.com) ("Providing API access to our integrated partners"). The portal is public to browse and offers sign-up, but the actual **API products, operations, keys, and any OpenAPI definition sit behind the portal sign-in and partner approval** — this is not an openly self-serve public developer API. FieldEdge markets a partner-based integration model with 40+ integration partners and directs prospective integrators to its partners/sales team.
+Everything profiled for FieldEdge is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fieldedge/](https://apis.io/providers/fieldedge/)** — or go straight to one of the APIs or properties below.
 
-Because the authoritative reference is gated, the logical APIs documented in `apis.yml` are **honestly modeled** (flagged `endpointsModeled: true`) from FieldEdge's documented product modules and its integration surface. No full OpenAPI surface has been fabricated; endpoint paths are inferred, not copied from a published public reference.
+### APIs (6)
 
-## Tags
+- [FieldEdge Customers API](https://apis.io/apis/fieldedge/fieldedge-customers-api/) — Manage customers, their service locations, and installed equipment records (make, model, age, and service history). Endpoint paths are modeled from…
+- [FieldEdge Work Orders API](https://apis.io/apis/fieldedge/fieldedge-work-orders-api/) — Create and track work orders (service calls / jobs) through their lifecycle, including status transitions, notes, attachments (photos), and technician…
+- [FieldEdge Dispatch & Scheduling API](https://apis.io/apis/fieldedge/fieldedge-dispatch-api/) — Read and manage appointments on the dispatch board - assigning jobs to technicians and viewing scheduled work across technicians and time windows. Endpoint…
+- [FieldEdge Invoices & Payments API](https://apis.io/apis/fieldedge/fieldedge-invoices-api/) — Generate and retrieve invoices from completed work and record payments, feeding the QuickBooks accounting sync. Endpoint paths are modeled from FieldEdge's…
+- [FieldEdge Service Agreements API](https://apis.io/apis/fieldedge/fieldedge-service-agreements-api/) — Manage recurring service agreements (maintenance plans) tied to customers and equipment, including covered visits and renewal tracking. Endpoint paths are…
+- [FieldEdge Pricebook API](https://apis.io/apis/fieldedge/fieldedge-pricebook-api/) — Read the flat-rate pricebook of services, parts, and materials used to build quotes and invoices in the field. Endpoint paths are modeled from FieldEdge's…
 
-- Field Service Management
-- FSM
-- HVAC
-- Plumbing
-- Electrical
-- Home Services
-- Dispatch
-- Work Orders
-- Contractors
-- Xplor
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+#### Security (1)
 
-## APIs (modeled)
+Authentication, trust centre, and vulnerability disclosure.
 
-### FieldEdge Customers API
+- [Fieldedge Domain Security](https://apis.io/security/fieldedge/fieldedge-domain-security/)
 
-Manage customers, their service locations, and installed equipment records (make, model, age, and service history). Modeled from the documented Customers & Locations module.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
+Published plans, tiers and prices.
 
-### FieldEdge Work Orders API
+- [Fieldedge Plans Pricing](https://apis.io/plans/fieldedge/fieldedge-plans-pricing/)
 
-Create and track work orders (service calls / jobs) through their lifecycle, including status transitions, notes, attachments (photos), and technician signatures captured in the mobile app. Modeled from the documented Work Orders & Mobile module.
+## Where to find this API
 
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### FieldEdge Dispatch & Scheduling API
-
-Read and manage appointments on the dispatch board — assigning jobs to technicians and viewing scheduled work across technicians and time windows. Modeled from the documented Dispatch/Scheduling module.
-
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
-
-### FieldEdge Invoices & Payments API
-
-Generate and retrieve invoices from completed work and record payments, feeding the QuickBooks accounting sync. Modeled from the documented Invoices/Payments module.
-
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
-
-### FieldEdge Service Agreements API
-
-Manage recurring service agreements (maintenance plans) tied to customers and equipment, including covered visits and renewal tracking. Modeled from the documented Service Agreements module.
-
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
-
-### FieldEdge Pricebook API
-
-Read the flat-rate pricebook of services, parts, and materials used to build quotes and invoices in the field. Modeled from the documented Pricebook module.
-
-- **Human URL:** [https://docs.api.fieldedge.com](https://docs.api.fieldedge.com)
-- **Base URL (modeled):** `https://api.fieldedge.com`
-
-## Pricing
-
-FieldEdge is sold as a **per-user monthly subscription** (month-to-month, no long-term contract) for the software product — indicatively ~$100/office user and ~$125/technician per month, with an approximate ~$225/month starting point (1 office user + 1 technician), plus one-time setup/implementation. API access itself is partner-gated and does not carry a separately published, self-serve price. See [plans/fieldedge-plans-pricing.yml](plans/fieldedge-plans-pricing.yml) and [fieldedge.com/pricing](https://fieldedge.com/pricing/).
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/fieldedge)
 - [Website](https://fieldedge.com)
-- [Documentation (Developer Portal)](https://docs.api.fieldedge.com)
+- [Documentation](https://docs.api.fieldedge.com)
 - [Pricing](https://fieldedge.com/pricing/)
-- [Plans](plans/fieldedge-plans-pricing.yml)
+- [Blog](https://fieldedge.com/blog/feed/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 11.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 15.8 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fieldedge/](https://apis.io/providers/fieldedge/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FieldEdge: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fieldedge/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
